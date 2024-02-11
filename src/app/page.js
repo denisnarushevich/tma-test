@@ -5,7 +5,7 @@ import {useCallback, useState} from "react";
 
 
 export default function Home() {
-    const [value, setValue] = useState(localStorage.getItem('value') ?? "0");
+    const [value, setValue] = useState(global?.window?.localStorage?.getItem('value') ?? "0");
 
     const handleClick = useCallback(() => {
         setValue((prevValue) => {
